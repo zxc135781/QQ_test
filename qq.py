@@ -16,7 +16,9 @@ for index in range(len(b)):
                 {
                     'product': b[index]['product'],
                     'versionBuild': b[index]['versionBuild'],
-                    'endTime': b[index]['endTime']
+                    'endTime': b[index]['endTime'],
+                    'pkgDownloadUrl': b[index]['pkgDownloadUrl'],
+                    'pkgMd5': b[index]['pkgMd5'],
                 })
             print(content)
             with open('father.yml', 'w') as nf:
