@@ -9,7 +9,7 @@ with open('father.yml') as f:
     content = yaml.load(f,Loader=yaml.FullLoader)
     print(type(content))
     print(content)
-    content.update({'age': 39})
+    content.update({'age': 31})
     print(content)
     with open('father.yml', 'w') as nf:
         yaml.dump(content, nf)
