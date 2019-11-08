@@ -13,7 +13,7 @@ a = r.json()
 b= a['data']['taskList']
 for index in range(len(b)):
     # print(b[index]['name'])
-    if (b[index]['product']== 'com.tencent.mobileqq' and b[index]['expireStatus']==False):
+    if (b[index]['product']== 'com.tencent.mobileqq' and b[index]['expireStatus']==True):
         print(b[index]['versionBuild'])
         with open('father.yml') as f:
             content = yaml.load(f, Loader=yaml.FullLoader)
