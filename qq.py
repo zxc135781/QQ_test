@@ -25,4 +25,4 @@ for index in range(len(b)):
             with open('father.yml', 'w') as nf:
                 yaml.dump(content, nf)
 
-print('$qqq')
+print($qqq)
