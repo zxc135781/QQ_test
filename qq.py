@@ -2,6 +2,7 @@
 
 import requests
 import yaml
+import os
 
 r=requests.get('http://task.qq.com/index.php/taskListContent?&pageSize=10&pageNumber=1')
 a = r.json()
@@ -25,4 +26,8 @@ for index in range(len(b)):
             with open('father.yml', 'w') as nf:
                 yaml.dump(content, nf)
 
-print($qqq)
+
+
+env_dist = os.environ # environ是在os.py中定义的一个dict environ = {}
+
+print(env_dist.get('qqq'))

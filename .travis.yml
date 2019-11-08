@@ -1,6 +1,6 @@
 language: python
 sudo: required
-install: pip install requests PyYAML
+install: pip install requests PyYAML os
 script: python qq.py
 deploy:
   provider: pages
