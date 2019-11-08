@@ -49,7 +49,7 @@ for index in range(len(b)):
                 sender = env_dist.get('sender') #发件人
                 receiver = env_dist.get('receiver') #收件人
                 smtpserver = 'smtp.163.com'
-                username = env_dist.get('receiver')  #发件人
+                username = env_dist.get('sender')  #发件人
                 password = env_dist.get('password') #密码
                 mail_title = version
 
