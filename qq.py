@@ -17,17 +17,6 @@ for index in range(len(b)):
         print(b[index]['versionBuild'])
         with open('father.yml') as f:
             content = yaml.load(f, Loader=yaml.FullLoader)
-            print(content)
-            content.update(
-                {
-                    'product': b[index]['product'],
-                    'versionBuild': b[index]['versionBuild'],
-                    'endTime': b[index]['endTime'],
-                    'pkgDownloadUrl': b[index]['pkgDownloadUrl'],
-                    'pkgMd5': b[index]['pkgMd5'],
-                })
-            print(content)
-            version = content['version']
             if (content['versionBuild'] != b[index]['versionBuild']):
                 # 报名部分
                 headers = {
@@ -40,6 +29,18 @@ for index in range(len(b)):
                 a = requests.get('https://task.qq.com/index.php/api/appSignup/' + b[index]['id'], headers=headers,
                                  cookies=cookies)
                 print(a.text)
+            print(content)
+            content.update(
+                {
+                    'product': b[index]['product'],
+                    'versionBuild': b[index]['versionBuild'],
+                    'endTime': b[index]['endTime'],
+                    'pkgDownloadUrl': b[index]['pkgDownloadUrl'],
+                    'pkgMd5': b[index]['pkgMd5'],
+                })
+            print(content)
+            version = content['version']
+
             print(version)
             # if (version!=b[index]['versionBuild']):
             #     url = b[index]['pkgDownloadUrl']
