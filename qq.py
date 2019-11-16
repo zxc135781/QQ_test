@@ -8,12 +8,12 @@ from email.header import Header
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
-r=requests.get('http://task.qq.com/index.php/taskListContent?&pageSize=10&pageNumber=1')
+r = requests.get('http://task.qq.com/index.php/taskListContent?&pageSize=10&pageNumber=1')
 a = r.json()
-b= a['data']['taskList']
+b = a['data']['taskList']
 for index in range(len(b)):
     # print(b[index]['name'])
-    if (b[index]['product']== 'com.tencent.mobileqq' and b[index]['expireStatus']==True):
+    if (b[index]['product'] == 'com.tencent.mobileqq' and b[index]['expireStatus'] == True):
         print(b[index]['versionBuild'])
         with open('father.yml') as f:
             content = yaml.load(f, Loader=yaml.FullLoader)
@@ -28,6 +28,18 @@ for index in range(len(b)):
                 })
             print(content)
             version = content['version']
+            if (content['versionBuild'] != b[index]['versionBuild']):
+                # 报名部分
+                headers = {
+                    'Host': 'task.qq.com',
+                    'Connection': 'Keep-Alive'
+                }
+                cookies = dict(uin='827169070', useopenid='1', appid='1105152396',
+                               openid='1AB9A94FD82CEFAB18D66A99FCC8BE6B',
+                               access_token='81E0BB930516545FA5FE74D7F7268BF1')
+                a = requests.get('https://task.qq.com/index.php/api/appSignup/' + b[index]['id'], headers=headers,
+                                 cookies=cookies)
+                print(a.text)
             print(version)
             # if (version!=b[index]['versionBuild']):
             #     url = b[index]['pkgDownloadUrl']
