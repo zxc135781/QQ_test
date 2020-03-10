@@ -1,8 +1,8 @@
-endTime: '2019-11-18 23:59:59'
+endTime: '2020-03-11 23:59:59'
 id: null
 leftTime: "1\u5929\u540E"
-pkgDownloadUrl: https://crowdtask-1251316161.file.myqcloud.com/packages/com.tencent.mobileqq_8.2.0.4262.1277_1573824550.apk
-pkgMd5: c1bbe6a91f5d4b5b1e28b878500f32d6
+pkgDownloadUrl: https://crowdtask-1251316161.file.myqcloud.com/packages/com.tencent.mobileqq_8.3.0.1351_1583749919.apk
+pkgMd5: 6604ece3bf80b918e75815c57fab03e1
 product: com.tencent.mobileqq
 version: null
-versionBuild: 8.2.0.4262.1277
+versionBuild: 8.3.0.1351
