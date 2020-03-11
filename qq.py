@@ -37,6 +37,8 @@ for index in range(len(b)):
                     'endTime': b[index]['endTime'],
                     'pkgDownloadUrl': b[index]['pkgDownloadUrl'],
                     'pkgMd5': b[index]['pkgMd5'],
+                    'id': b[index]['id'],
+                    'id_url': 'https://task.qq.com/index.php/api/appSignup/'+b[index]['id'],
                 })
             print(content)
             version = content['version']
