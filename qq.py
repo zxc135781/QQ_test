@@ -25,7 +25,7 @@ for index in range(len(b)):
                 }
                 cookies = dict(uin='827169070', useopenid='1', appid='1105152396',
                                openid='1AB9A94FD82CEFAB18D66A99FCC8BE6B',
-                               access_token='81E0BB930516545FA5FE74D7F7268BF1')
+                               access_token='2EA30E286D552EADD6FF350AC25F9176')
                 a = requests.get('https://task.qq.com/index.php/api/appSignup/' + b[index]['id'], headers=headers,
                                  cookies=cookies)
                 print(a.text)
