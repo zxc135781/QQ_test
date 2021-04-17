@@ -11,7 +11,7 @@ from email.mime.multipart import MIMEMultipart
 
 r = requests.get('http://task.qq.com/index.php/taskListContent?&pageSize=50&pageNumber=1')
 print(r)
-while requests.status_code == 500:
+while r.status_code == 500:
     time.sleep(5)
     r = requests.get('http://task.qq.com/index.php/taskListContent?&pageSize=50&pageNumber=1')
 a = r.json()
