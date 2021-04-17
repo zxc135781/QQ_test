@@ -8,7 +8,7 @@ from email.header import Header
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
-r = requests.get('http://task.qq.com/index.php/taskListContent?&pageSize=100&pageNumber=1')
+r = requests.get('http://task.qq.com/index.php/taskListContent?&pageSize=50&pageNumber=1')
 a = r.json()
 b = a['data']['taskList']
 for index in range(len(b)):
