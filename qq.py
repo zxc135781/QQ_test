@@ -15,6 +15,7 @@ while r.status_code == 500:
     time.sleep(5)
     r = requests.get('http://task.qq.com/index.php/taskListContent?&pageSize=50&pageNumber=1')
 a = r.json()
+print(a)
 b = a['data']['taskList']
 for index in range(len(b)):
     # print(b[index]['name'])
