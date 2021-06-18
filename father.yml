@@ -1,9 +1,9 @@
-endTime: '2020-03-11 23:59:59'
-id: '365541'
-id_url: https://task.qq.com/index.php/api/appSignup/365541
+endTime: '2021-06-20 23:59:59'
+id: '370542'
+id_url: https://task.qq.com/index.php/api/appSignup/370542
 leftTime: "1\u5929\u540E"
-pkgDownloadUrl: https://crowdtask-1251316161.file.myqcloud.com/packages/com.tencent.mobileqq_8.3.0.1351_1583749919.apk
-pkgMd5: 6604ece3bf80b918e75815c57fab03e1
+pkgDownloadUrl: https://crowdtask-1302985970.file.myqcloud.com/packages/com.tencent.mobileqq_8.8.5.1838_1624015428.apk
+pkgMd5: 4b819fc02712d9560ff71728983866fc
 product: com.tencent.mobileqq
 version: null
-versionBuild: 8.3.0.1351
+versionBuild: 8.8.5.1838
